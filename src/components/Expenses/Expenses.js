@@ -5,6 +5,7 @@ import ExpenseItem from "./ExpenseItem";
 import ExpensesFilter from "./ExpensesFilter";
 import expenseItem from "./ExpenseItem";
 import ExpensesList from "./ExpensesList";
+import ExpensesChart from "./ExpensesChart";
 
 const Expenses = (props) => {
     //props로 컴포넌트 전달 - 무상태 컴포넌트
@@ -23,6 +24,7 @@ const Expenses = (props) => {
     return (
         <Card className="expenses">
             <ExpensesFilter selected={filterYear} onChangeFilter={filterChangeHandler}/>
+            <ExpensesChart expenses={filExpenses}/>
             <ExpensesList items={filExpenses}/>
         </Card>
     );
